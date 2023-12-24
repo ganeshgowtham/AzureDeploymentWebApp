@@ -7,7 +7,7 @@ app=Flask(__name__,template_folder='templates')
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/azure-ml-api', methods=['POST'])
 def azure_ml_api():
@@ -75,7 +75,7 @@ def local_ml_api():
        
         # Return the response from the endpoint as a JSON response       
         #return render_template('home.html', prediction_text="AQI for Jaipur {}".format(json.dumps(response.json()[0])))
-        return render_template('home.html', answer=response.json()[0]['answer'], start=response.json()[0]['start'],end=response.json()[0]['end'],
+        return render_template('index.html', answer=response.json()[0]['answer'], start=response.json()[0]['start'],end=response.json()[0]['end'],
                                score=response.json()[0]['score'])
 
     except Exception as e:
