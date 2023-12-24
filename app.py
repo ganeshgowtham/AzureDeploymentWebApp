@@ -27,7 +27,7 @@ def azure_ml_api():
         endpoint_url = f"https://question-answering-opschatbot.eastus2.inference.ml.azure.com/score"
 
         # Set the authorization header
-        subscription_key = "yaaA7zeQ1QeaIU04KDazvVoj3rdzwXQq" # Replace with your subscription key
+        subscription_key = "<<REPLACE>>" # Replace with your subscription key
         headers = {"Authorization": f"Bearer {subscription_key}"}
 
         # Send a POST request to the endpoint
